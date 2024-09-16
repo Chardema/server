@@ -23,4 +23,4 @@ jobs:
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Trigger API Update
-        run: curl -X GET https://<ton-projet>.vercel.app/api/update-data
+        run: curl -X GET https://servermagic.vercel.app/api/update-data
