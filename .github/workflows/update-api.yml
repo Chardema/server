@@ -1,0 +1,12 @@
+name: Update API on Vercel
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Toutes les 5 minutes
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send request to Vercel API
+        run: curl -X GET https://servermagic.vercel.app//api/update-data
